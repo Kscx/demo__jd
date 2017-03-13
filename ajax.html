@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+	<style>
+        @keyframes run{0%{right:800px; opacity:0;} 100%{right:0; opacity:1;}}
+        .page2{width:1210px; margin:0 auto;}
+        .page2 .title h2{height:40px; line-height:40px; font-size:20px; font-weight:normal; padding-top:17px; position:relative;}
+        .page2 .title h2 i{position:absolute; width:193px; height:18px; background:url(images/homebg.png) no-repeat left -100px;top:30px; left:81px;}
+        .page2 .title span{ cursor: pointer; float: right; color:#ccc; font-size: 13px;}
+        .page2 .con{height:231px; border:1px solid #ededed; border-top-color:#d1d1d1; position:relative;}
+        .page2 .con:hover i{animation:run 1s;}
+        .page2 .con i{position:absolute; top:-3px; right:0; width:365px; height:5px; background:url(images/homebg.png) no-repeat 0 -124px;}
+        .page2 .con li{float:left; padding: 21px 36px 0;}
+        .page2 .con li .pic{width:129px; height:129px; font-size:0; overflow:hidden;}
+        .page2 .con li .font a{display:block; font-size:12px; line-height:18px;}
+        .page2 .con li .font span{color:#b51d1a; font-size:14px; line-height:36px;}
+    </style>
+	<script src="js/jquery-3.1.0.js"></script>
+    <script>
+        $(function(){
+            $(".title span").on("click",function(){
+                $.getJSON("data/page.json",function(data){
+
+                    $(".con ul li").each(function(index){
+                        $(this).html('' +
+                            '<div class="pic">' +
+                                '<a href="#"><img src="'+data[index].pic+'"></a>' +
+                            '</div>'+
+                            '<div class="font">'+
+                                '<a href="#">'+data[index].name+'<br>'+data[index].type+'</a>'+
+                                '<span>¥'+data[index].num+'</span>'+
+                            '</div>'
+                        )
+                    })
+                })
+
+            })
+        });
+    </script>
+</head>
+
+<body>
+<div class="header">
+	<div class="h_top">
+    	<div class="inner clearfix">
+        	<div class="diqu">送至：北京</div>
+            <ul>
+            	<li><a href="#" class="first">你好，请登录</a><a href="#" class="active">免费注册</a></li>
+                <li class="line"></li>
+                <li><a href="#">我的订单</a></li>
+                <li class="line"></li>
+                <li class="bj"><a href="#">我的京东<i>◇</i></a></li>
+                <li class="line"></li>
+                <li><a href="#">京东会员</a></li>
+                <li class="line"></li>
+                <li><a href="#">企业采购</a></li>
+                <li class="line"></li>
+                <li class="bj"><a href="#"><span></span>手机京东<i>◇</i></a></li>
+                <li class="line"></li>
+                <li class="bj"><a href="#">关注京东<i>◇</i></a></li>
+                <li class="line"></li>
+                <li class="bj"><a href="#">客户服务<i>◇</i></a></li>
+                <li class="line"></li>
+                <li class="bj"><a href="#">网站导航<i>◇</i></a></li>
+                <li class="line"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="mid clearfix">
+    	<div class="logo"><a href="#"><img src="images/logo-201305.png"></a></div>
+        <div class="search">
+        	<form>
+            	<input type="text" value="卡通手机壳" class="text">
+                <input type="submit" value="搜索" class="sub">
+            </form>
+            <div class="tags">
+                <a href="#" class="active">七夕礼品</a>
+                <a href="#">消暑神器</a>
+                <a href="#">农用物资</a>
+                <a href="#">鲜花99元</a>
+                <a href="#">电影京券</a>
+                <a href="#">防晒喷雾</a>
+                <a href="#">永生花</a>
+                <a href="#">小米电脑</a>
+            </div>
+        </div>
+        <div class="buy">
+        	<a href="#">我的购物车</a>
+            <i>></i>
+            <div class="number">0</div>
+        </div>
+   </div>
+   <div class="bot clearfix">
+    	<div class="nav">全部商品分类</div>
+        <ul>
+        	<li><a href="#">服装城</a></li>
+        	<li><a href="#">美妆馆</a></li>
+        	<li><a href="#">京东超市</a></li>
+        	<li><a href="#">生鲜</a></li>
+        	<li><a href="#">全球购</a></li>
+        	<li><a href="#">闪购</a></li>
+        	<li><a href="#">团购</a></li>
+        	<li><a href="#">拍卖</a></li>
+        	<li><a href="#">金融</a></li>
+        </ul>
+   </div>
+</div>
+<div class="page2">
+	<div class="inner">
+		<div class="title">
+			<h2>猜你喜欢<i></i><span>点击我查看作业</span></h2>
+		</div>
+		<div class="con">
+			<i></i>
+			<ul>
+				<li>
+					<div class="pic"><a href="#"><img src="images/content_icon_03.jpg"></a></div>
+					<div class="font">
+						<a href="#">金士顿<br>（Kingston）16GB</a>
+						<span>¥9999.00</span>
+					</div>
+				</li>
+				<li>
+					<div class="pic"><a href="#"><img src="images/content_icon_05.jpg"></a></div>
+					<div class="font">
+						<a href="#">金士顿<br>（Kingston）16GB</a>
+						<span>¥9999.00</span>
+					</div>
+				</li>
+				<li>
+					<div class="pic"><a href="#"><img src="images/content_icon_07.jpg"></a></div>
+					<div class="font">
+						<a href="#">金士顿<br>（Kingston）16GB</a>
+						<span>¥9999.00</span>
+					</div>
+				</li>
+				<li>
+					<div class="pic"><a href="#"><img src="images/content_icon_09.jpg"></a></div>
+					<div class="font">
+						<a href="#">金士顿<br>（Kingston）16GB</a>
+						<span>¥9999.00</span>
+					</div>
+				</li>
+				<li>
+					<div class="pic"><a href="#"><img src="images/content_icon_11.jpg"></a></div>
+					<div class="font">
+						<a href="#">金士顿<br>（Kingston）16GB</a>
+						<span>¥9999.00</span>
+					</div>
+				</li>
+				<li>
+					<div class="pic"><a href="#"><img src="images/content_icon_13.jpg"></a></div>
+					<div class="font">
+						<a href="#">金士顿<br>（Kingston）16GB</a>
+						<span>¥9999.00</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
